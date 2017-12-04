@@ -44,3 +44,31 @@ rlocus(G)
 figure(6)
 step(F)
 
+Gc = tf([1.955,9.974,15],[1,0])
+
+Gp = tf([20],[1,12,20])
+
+G  = Gc * Gp
+
+F  = feedback(G,1,-1)
+
+figure(7)
+rlocus(G)
+
+figure(8)
+step(F)
+
+Gc = tf([5.055,24.174,35],[1,0])
+
+Gp = tf([20],[1,12,20])
+
+G  = Gc * Gp
+
+F  = feedback(G,1,-1)
+
+figure(9)
+rlocus(G)
+
+figure(10)
+step(F)
+
